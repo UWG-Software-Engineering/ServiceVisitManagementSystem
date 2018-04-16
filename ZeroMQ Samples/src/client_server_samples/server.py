@@ -11,7 +11,7 @@ def runServer():
         print("waiting for message...")
         message = socket.recv()
         print("Received request: %s" % message)
-        if(message == b"exit"):
+        if(message == b"exit" or message == "exit"):
             return
         #  Do some 'work'
         time.sleep(1)
